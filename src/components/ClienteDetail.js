@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import clienteService from '../services/clienteService';
+import './ClienteDetail.css'; // Importa el archivo CSS
 
 const ClienteDetail = ({ id }) => {
     const [cliente, setCliente] = useState(null);
@@ -14,7 +15,7 @@ const ClienteDetail = ({ id }) => {
     };
 
     return (
-        <div>
+        <div className="cliente-detail-container"> {/* Aplica una clase contenedor */}
             {cliente ? (
                 <div>
                     <h2>Detalles del Cliente</h2>
